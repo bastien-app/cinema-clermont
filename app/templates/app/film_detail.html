@@ -1,0 +1,10 @@
+<h1>{{film.title}}</h1>
+{%for cinema in cinemas%}
+    <h2>{{ cinema.name }}</h2>
+    {% for seance in seances %}
+        {% if seance.cinema == cinema %}
+            <p>{{ seance.seance_date }} {{ seance.lang }} {{ seance.techno }}</p>
+        {% endif %}
+    {% endfor %}
+    <br>
+{% endfor %}
